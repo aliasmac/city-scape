@@ -1,4 +1,4 @@
-## App Usage Intructions
+## App Usage Instructions
 
 Clone the repo and in the project directory, you can run:
 
