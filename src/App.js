@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom'
 
-function App() {
+import Home from './Home'
+import TableComponent from './container/component/TableComponent';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path={'/city'} component={TableComponent}/>
+        <Route path={'/country'} component={TableComponent}/>
+        <Route path={'/all-buildings'} component={TableComponent}/>
+        <Route path={'/100m+'} component={TableComponent}/>
+        <Route path={'/150m+'} component={TableComponent}/>
+        <Route path={'/200m+'} component={TableComponent}/>
+        <Route path={'/300m+'} component={TableComponent}/>
+        <Route path={'/telecom-towers'} component={TableComponent}/>
+        <Route path={'/all-structures'} component={TableComponent}/>
+      </Switch>
     </div>
-  );
+  )
 }
 
 export default App;
