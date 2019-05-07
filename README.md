@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## App Usage Intructions
 
 Clone the repo and in the project directory, you can run:
