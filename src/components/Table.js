@@ -13,12 +13,12 @@ const Table = (props) => {
     </thead>
   );
 
-  const tableRows = tableData && tableData.map(row => {
+  const tableRows = tableData && tableData.map((row, idx) => {
     return (
-      <tr>
+      <tr key={`tr${idx}`}>
         {Object.keys(tableData[0]).map((column, idx) => {
           return (
-            <td key={`row${idx}`}>{row[column]}</td>
+            <td key={`td${idx}`}>{row[column]}</td>
           )
         })}
       </tr>

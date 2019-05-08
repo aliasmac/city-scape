@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom';
 import Papa from 'papaparse';
-import Table from '../Table';
 import orderBy from "lodash/orderBy";
 
-import {toTitleCase} from '../../Helpers/toTitleCase'
+import Table from './Table';
+import {toTitleCase} from '../Helpers/toTitleCase'
 
-class TableComponent extends Component {
+class TablePage extends Component {
 
   state = {
     data: [],
@@ -15,7 +15,7 @@ class TableComponent extends Component {
   }
 
   componentDidMount() {
-    const csvFilePath = require('../../data/cities.csv')
+    const csvFilePath = require('../data/cities.csv')
     Papa.parse(csvFilePath, {
       header: true,
       download: true,
@@ -50,4 +50,4 @@ class TableComponent extends Component {
   }
 }
 
-export default TableComponent
+export default TablePage
