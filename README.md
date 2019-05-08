@@ -1,6 +1,6 @@
 ## App Usage Instructions
 
-Clone the repo and in the project directory, you can run:
+Clone the repo and then in the project directory run:
 
 ### `npm start`
 
